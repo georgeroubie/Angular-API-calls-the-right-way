@@ -1,2 +1,1 @@
-# Angular API Calls
-Do not hard code api urls, query parameters and path variables. Use the api-endpoints.service.ts.
+# Angular API calls the right way
