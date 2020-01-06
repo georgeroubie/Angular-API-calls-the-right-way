@@ -5,7 +5,11 @@ export class UrlBuilder {
     public url: string;
     public queryString: QueryStringParameters;
 
-    constructor(private baseUrl: string, private action: string, queryString?: QueryStringParameters) {
+    constructor(
+        private baseUrl: string,
+         private action: string,
+         queryString?: QueryStringParameters
+    ) {
         this.url = [baseUrl, action].join('/');
         this.queryString = queryString || new QueryStringParameters();
     }
