@@ -6,14 +6,9 @@ export class QueryStringParameters {
     }
 
     public push(key: string, value: Object): void {
-        // Encode queryString value
         value = encodeURIComponent(value.toString());
-        const paramAndValue: string = [key, value].join('=');
-        this.paramsAndValues.push(paramAndValue);
+        this.paramsAndValues.push([key, value].join('='));
     }
 
-    public toString(encoded: boolean = false): string {
-        const queryString: string = this.paramsAndValues.join('&');
-        return encoded ? encodeURIComponent(queryString) : queryString;
-    }
+    public toString = (): string => this.paramsAndValues.join('&');
 }
